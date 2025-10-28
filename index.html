@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shimo Denis | Full-Stack Personal Portfolio</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="portfolio.css" rel="stylesheet">
+</head>
+<body class="text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header id="header" class="sticky top-0 z-50 bg-white header-shadow transition-all duration-300">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-bold gradient-text">Shimo Denis</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#about" class="text-gray-600 hover:text-indigo-600 transition duration-150">About</a>
+                <a href="#skills" class="text-gray-600 hover:text-indigo-600 transition duration-150">Skills</a>
+                <a href="#projects" class="text-gray-600 hover:text-indigo-600 transition duration-150">Projects</a>
+                <a href="#contact" class="text-gray-600 hover:text-indigo-600 transition duration-150">Contact</a>
+            </div>
+            <!-- Mobile Menu Button (SVG Icon for simplicity and single-file design) -->
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100 transition">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <a href="#about" class="block py-3 px-6 text-gray-700 hover:bg-gray-50 transition duration-150" onclick="closeMobileMenu()">About</a>
+            <a href="#skills" class="block py-3 px-6 text-gray-700 hover:bg-gray-50 transition duration-150" onclick="closeMobileMenu()">Skills</a>
+            <a href="#projects" class="block py-3 px-6 text-gray-700 hover:bg-gray-50 transition duration-150" onclick="closeMobileMenu()">Projects</a>
+            <a href="#contact" class="block py-3 px-6 text-gray-700 hover:bg-gray-50 transition duration-150" onclick="closeMobileMenu()">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. Hero Section -->
+        <section id="home" class="min-h-screen flex items-center bg-white">
+            <div class="container mx-auto px-6 py-12 md:py-0 flex flex-col md:flex-row items-center justify-between">
+                <!-- Text Content -->
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <p class="text-lg font-medium text-indigo-600 mb-3">Hello, I'm</p>
+                    <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight">
+                        Shimo Denis
+                    </h1>
+                    <h2 class="text-3xl md:text-4xl font-light text-gray-700 mt-2 mb-6">
+                        A <span class="gradient-text font-semibold">Full-Stack Developer</span>
+                        
+                    </h2>
+                    <p class="text-gray-600 max-w-lg mb-8 text-lg">
+                        I build scalable and user-centric web applications, turning complex problems into elegant, functional code. My passion lies in modern JavaScript frameworks and robust backend architecture.
+                    </p>
+                    <a href="#contact" class="inline-block bg-indigo-600 text-white font-semibold py-3 px-8 rounded-full shadow-lg btn-primary hover:bg-indigo-700">
+                        Get In Touch
+                    </a>
+                    <a href="#projects" class="inline-block text-indigo-600 font-semibold py-3 px-8 ml-4 rounded-full border-2 border-indigo-600 transition duration-150 hover:bg-indigo-50 hover:text-indigo-700">
+                        View Work
+                    </a>
+                </div>
+                <!-- Image Placeholder (using a modern graphic style) -->
+                <div class="md:w-1/2 flex justify-center">
+                    <svg class="w-full max-w-md h-auto text-indigo-500" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" fill="currentColor" opacity="0.1"/>
+                        <path d="M14.59 8L12 10.59 9.41 8 8 9.41 10.59 12 8 14.59 9.41 16 12 13.41 14.59 16 16 14.59 13.41 12 16 9.41z" fill="currentColor"/>
+                        <path d="M12 4a8 8 0 018 8 8 8 0 01-8 8 8 8 0 01-8-8 8 8 0 018-8zm0 2a6 6 0 00-6 6 6 6 0 006 6 6 6 0 006-6 6 6 0 00-6-6zM15 11h-3V8h-2v3H7v2h3v3h2v-3h3v-2z" fill="currentColor" opacity="0.6"/>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. About Me Section -->
+        <section id="about" class="section-padding bg-white border-t border-gray-200">
+            <div class="container mx-auto px-6">
+                <h3 class="text-4xl font-bold text-center mb-4 gradient-text">About Me</h3>
+                <p class="text-xl text-center text-gray-600 mb-16 max-w-3xl mx-auto">
+                    A brief story of my journey, passion, and talent ethos.
+                </p>
+
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/3">
+                         <!-- Profile Image Placeholder -->
+                        <div class="w-64 h-64 mx-auto bg-gray-300 rounded-full flex items-center justify-center shadow-xl overflow-hidden">
+                            <span class="Image"><img src="516012879_1951315269136255_4217220911805539698_n.jpg"> Photo</span>
+                        </div>
+                    </div>
+                    <div class="md:w-2/3 text-lg space-y-6">
+                        <p>
+                            I am a seasoned Full-Stack Developer with 2 months of experience specializing in high-performance web applications. My projects has been focused on the intersection of intuitive user experience and robust system design. I thrive in agile environments where continuous learning and collaboration are paramount.
+                        </p>
+                        <p>
+                            From initial concept to deployment and maintenance, I handle the entire development lifecycle. I believe the best solutions are simple, efficient, and scalable. Beyond coding, I am passionate about mentoring junior developers and contributing to open-source projects.
+                        </p>
+                        <p class="font-semibold text-indigo-600">
+                            Let's build something exceptional together!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Skills Section -->
+        <section id="skills" class="section-padding bg-gray-50 border-t border-gray-200">
+            <div class="container mx-auto px-6">
+                <h3 class="text-4xl font-bold text-center mb-4 text-gray-900">Technical Expertise</h3>
+                <p class="text-xl text-center text-gray-600 mb-16 max-w-3xl mx-auto">
+                    My diverse tech stack covers everything from front-end design to cloud deployment.
+                </p>
+
+                <!-- Skills Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                    <!-- Category 1: Frontend -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-indigo-600">
+                        <h4 class="text-2xl font-bold text-indigo-600 mb-5">Frontend Development</h4>
+                        <div class="flex flex-wrap gap-4">
+                            <div class="flex items-center space-x-2 text-gray-700">
+                                <span class="skill-icon bg-blue-100 text-blue-600">R</span>
+                                <span>React</span>
+                            </div>
+                            <div class="flex items-center space-x-2 text-gray-700">
+                                <span class="skill-icon bg-yellow-100 text-yellow-600">JS</span>
+                                <span>JavaScript (ES6+)</span>
+                            </div>
+                            <div class="flex items-center space-x-2 text-gray-700">
+                                <span class="skill-icon bg-blue-100 text-blue-600">TS</span>
+                                <span>TypeScript</span>
+                            </div>
+                            <div class="flex items-center space-x-2 text-gray-700">
+                                <span class="skill-icon bg-purple-100 text-purple-600">TW</span>
+                                <span>Tailwind CSS</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Category 2: Backend & Database -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-emerald-500">
+                        <h4 class="text-2xl font-bold text-emerald-500 mb-5">Backend & Database</h4>
+                        <div class="flex flex-wrap gap-4">
+                            <div class="flex items-center space-x-2 text-gray-700">
+                                <span class="skill-icon bg-green-100 text-green-600">ND</span>
+                                <span>Node.js / Express</span>
+                            </div>
+                            <div class="flex items-center space-x-2 text-gray-700">
+                                <span class="skill-icon bg-red-100 text-red-600">FB</span>
+                                <span>Firebase / Firestore</span>
+                            </div>
+                            <div class="flex items-center space-x-2 text-gray-700">
+                                <span class="skill-icon bg-blue-100 text-blue-600">PG</span>
+                                <span>PostgreSQL</span>
+                            </div>
+                            <div class="flex items-center space-x-2 text-gray-700">
+                                <span class="skill-icon bg-gray-100 text-gray-600">PY</span>
+                                <span>Python</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Category 3: Tools & DevOps -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-red-500">
+                        <h4 class="text-2xl font-bold text-red-500 mb-5">Tools & Deployment</h4>
+                        <div class="flex flex-wrap gap-4">
+                            <div class="flex items-center space-x-2 text-gray-700">
+                                <span class="skill-icon bg-orange-100 text-orange-600">G</span>
+                                <span>Git / GitHub</span>
+                            </div>
+                            <div class="flex items-center space-x-2 text-gray-700">
+                                <span class="skill-icon bg-blue-100 text-blue-600">D</span>
+                                <span>Docker</span>
+                            </div>
+                            <div class="flex items-center space-x-2 text-gray-700">
+                                <span class="skill-icon bg-pink-100 text-pink-600">V</span>
+                                <span>Vercel / Netlify</span>
+                            </div>
+                            <div class="flex items-center space-x-2 text-gray-700">
+                                <span class="skill-icon bg-gray-100 text-gray-600">AW</span>
+                                <span>AWS Basics</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Projects Section -->
+        <section id="projects" class="section-padding bg-white border-t border-gray-200">
+            <div class="container mx-auto px-6">
+                <h3 class="text-4xl font-bold text-center mb-4 gradient-text">Featured Projects</h3>
+                <p class="text-xl text-center text-gray-600 mb-16 max-w-3xl mx-auto">
+                    A selection of my recent work showcasing different skills and technologies.
+                </p>
+
+                <!-- Project Grid -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+
+                    <!-- Project 1: Collaborative Task Manager -->
+                    <div class="bg-gray-50 rounded-xl shadow-lg overflow-hidden flex flex-col transform hover:scale-[1.02] transition duration-300">
+                        <!-- Placeholder Image -->
+                        <div class="h-48 bg-indigo-500 flex items-center justify-center">
+                            <span class="text-white text-2xl font-bold">Task Manager UI</span>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h4 class="text-2xl font-bold text-gray-900 mb-3">Collaborative Task Manager</h4>
+                            <p class="text-gray-600 mb-4 flex-grow">
+                                A real-time task management application built for agile teams. Features include task assignments, deadlines, and progress tracking with a sleek React frontend and Firestore backend.
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-2.5 py-0.5 rounded-full">React</span>
+                                <span class="bg-red-100 text-red-800 text-sm font-medium px-2.5 py-0.5 rounded-full">Firestore</span>
+                                <span class="bg-green-100 text-green-800 text-sm font-medium px-2.5 py-0.5 rounded-full">Node.js</span>
+                            </div>
+                            <div class="flex space-x-4 mt-auto">
+                                <a href="#" class="text-indigo-600 font-semibold hover:text-indigo-800 transition">View Live &rarr;</a>
+                                <a href="#" class="text-gray-600 font-semibold hover:text-gray-800 transition">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: E-commerce Headless API -->
+                    <div class="bg-gray-50 rounded-xl shadow-lg overflow-hidden flex flex-col transform hover:scale-[1.02] transition duration-300">
+                        <!-- Placeholder Image -->
+                        <div class="h-48 bg-emerald-500 flex items-center justify-center">
+                            <span class="text-white text-2xl font-bold">API Documentation</span>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h4 class="text-2xl font-bold text-gray-900 mb-3">E-commerce Headless API</h4>
+                            <p class="text-gray-600 mb-4 flex-grow">
+                                A high-performance RESTful API powering a modern e-commerce storefront. Optimized for fast query responses and integrated with a PostgreSQL database.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-blue-100 text-blue-800 text-sm font-medium px-2.5 py-0.5 rounded-full">Express</span>
+                                <span class="bg-blue-100 text-blue-800 text-sm font-medium px-2.5 py-0.5 rounded-full">PostgreSQL</span>
+                                <span class="bg-orange-100 text-orange-800 text-sm font-medium px-2.5 py-0.5 rounded-full">Docker</span>
+                            </div>
+                            <div class="flex space-x-4 mt-auto">
+                                <a href="#" class="text-indigo-600 font-semibold hover:text-indigo-800 transition">View Live &rarr;</a>
+                                <a href="#" class="text-gray-600 font-semibold hover:text-gray-800 transition">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: Data Visualization Dashboard -->
+                    <div class="bg-gray-50 rounded-xl shadow-lg overflow-hidden flex flex-col transform hover:scale-[1.02] transition duration-300">
+                        <!-- Placeholder Image -->
+                        <div class="h-48 bg-red-500 flex items-center justify-center">
+                            <span class="text-white text-2xl font-bold">Chart Dashboard</span>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h4 class="text-2xl font-bold text-gray-900 mb-3">Data Visualization Dashboard</h4>
+                            <p class="text-gray-600 mb-4 flex-grow">
+                                An interactive dashboard for tracking key business metrics. Uses D3.js and React to render complex, responsive charts and graphs.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-2.5 py-0.5 rounded-full">React</span>
+                                <span class="bg-yellow-100 text-yellow-800 text-sm font-medium px-2.5 py-0.5 rounded-full">D3.js</span>
+                                <span class="bg-purple-100 text-purple-800 text-sm font-medium px-2.5 py-0.5 rounded-full">TypeScript</span>
+                            </div>
+                            <div class="flex space-x-4 mt-auto">
+                                <a href="#" class="text-indigo-600 font-semibold hover:text-indigo-800 transition">View Live &rarr;</a>
+                                <a href="#" class="text-gray-600 font-semibold hover:text-gray-800 transition">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Contact Section -->
+        <section id="contact" class="section-padding bg-gray-50 border-t border-gray-200">
+            <div class="container mx-auto px-6">
+                <h3 class="text-4xl font-bold text-center mb-4 text-gray-900">Get In Touch</h3>
+                <p class="text-xl text-center text-gray-600 mb-16 max-w-3xl mx-auto">
+                    Have a project in mind or just want to say hello? Send me a message!
+                </p>
+
+                <div class="max-w-xl mx-auto bg-white p-8 md:p-12 rounded-xl shadow-2xl border-t-4 border-indigo-600">
+                    <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                            <input type="text" id="name" name="name" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 transition duration-150">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                            <input type="email" id="email" name="email" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 transition duration-150">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                            <textarea id="message" name="message" rows="5" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 transition duration-150"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-indigo-600 text-white font-semibold py-3 px-6 rounded-lg shadow-lg btn-primary hover:bg-indigo-700">
+                            Send Message
+                        </button>
+                    </form>
+
+                    <!-- Message Box for form status -->
+                    <div id="form-message" class="mt-6 p-4 rounded-lg hidden text-center" role="alert"></div>
+                </div>
+
+                <!-- Alternative Contact Info -->
+                <div class="mt-12 text-center text-gray-600 space-y-2">
+                    <p>
+                        <span class="font-semibold text-gray-900">Email:</span> denisgakwisi66@gmail.com
+                    </p>
+                    <p>
+                        <span class="font-semibold text-gray-900">Instagram:</span>/@g.s.d58
+                    </p>
+                    <p>
+                        <span class="font-semibold text-gray-900">GitHub:</span>/shimo denis
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 border-t border-indigo-700">
+        <div class="container mx-auto px-6 text-center">
+            <p class="mb-2">&copy; <span id="current-year"></span> Best fit . All rights reserved.</p>
+            <p class="text-sm text-gray-400">Built with passion and Talent.</p>
+        </div>
+    </footer>
+</body>
+</html>
